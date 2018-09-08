@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_main"
+    tools:context=".MainActivity">
+
+    <!--My Profile section -->
+    <TextView
+        android:id="@+id/my_profile"
+        style="@style/heading"
+        android:text="@string/my_profile" />
+
+    <ImageButton
+        android:id="@+id/edit_my_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/my_profile"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:contentDescription="@string/edit_your_profile"
+        android:onClick="editProfile"
+        android:src="@drawable/ic_edit" />
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_profile"
+        android:paddingTop="@dimen/padding_main"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/blood_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:text="@string/blood_type"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/additional_information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/blood_type"
+        android:text="@string/allergies"
+        android:visibility="invisible" />
+
+    <!--TextViews for Name, Phone Number -->
+    <TextView
+        android:id="@+id/contact"
+        style="@style/heading"
+        android:layout_below="@id/additional_information"
+        android:text="@string/contact" />
+
+    <ImageButton
+        android:id="@+id/edit_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/additional_information"
+        android:layout_toEndOf="@id/contact"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:contentDescription="@string/edit_contact"
+        android:onClick="editContact"
+        android:src="@drawable/ic_edit" />
+
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contact"
+        android:paddingTop="@dimen/padding_main"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/relation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contact_name"
+        android:text="@string/relation"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/contact_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relation"
+        android:text="@string/phone_number"
+        android:visibility="invisible" />
+
+    <!-- TODO: Notification Enabler switch -->
+
+
+</RelativeLayout>

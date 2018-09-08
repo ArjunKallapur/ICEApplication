@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_edit_contact"
+    tools:context=".EditContactActivity">
+
+    <TextView
+        android:id="@+id/contact_prompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/contact_prompt" />
+
+    <Button
+        android:id="@+id/search_contacts_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contact_prompt"
+        android:background="@color/colorPrimary"
+        android:onClick="searchContacts"
+        android:paddingTop="@dimen/padding_edit_contact"
+        android:text="@string/search_contact_button_text"
+        android:textColor="@color/colorWhite" />
+
+    <EditText
+        android:id="@+id/contact_first_name_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_contacts_button"
+        android:hint="@string/first_name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/contact_last_name_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contact_first_name_editText"
+        android:hint="@string/last_name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/contact_phone_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contact_last_name_editText"
+        android:hint="@string/phone_number_prompt"
+        android:inputType="phone" />
+
+    <TextView
+        android:id="@+id/relation_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contact_phone_editText"
+        android:text="@string/relation_prompt" />
+
+    <Spinner
+        android:id="@+id/relation_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relation_textView">
+
+    </Spinner>
+
+    <Button
+        android:id="@+id/finish_contact_button"
+        style="@style/finish_button"
+        android:layout_below="@id/relation_spinner"
+        android:onClick="endContactActivity" />
+
+
+</RelativeLayout>

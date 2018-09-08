@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_main">10dp</dimen>
+    <dimen name="padding_edit_profile">10dp</dimen>
+    <dimen name="padding_edit_contact">10dp</dimen>
+    <dimen name="padding_button">10dp</dimen>
+</resources>

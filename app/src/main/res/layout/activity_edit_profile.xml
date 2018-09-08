@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_edit_profile"
+    tools:context=".EditProfileActivity">
+
+    <TextView
+        android:id="@+id/profile_prompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_prompt"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/first_name_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_prompt"
+        android:hint="@string/first_name"
+        android:inputType="text"/>
+    <EditText
+        android:id="@+id/last_name_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/first_name_editText"
+        android:hint="@string/last_name"
+        android:inputType="text"/>
+
+    <!-- TODO: Make this a TextView and a match_parent spinner-->
+    <EditText
+        android:id="@+id/blood_type_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/blood_type_hint"
+        android:layout_below="@id/last_name_editText"
+        android:enabled="false"/>
+
+    <Spinner
+        android:id="@+id/blood_type_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/blood_type_textView"
+        android:layout_toEndOf="@+id/blood_type_textView">
+
+    </Spinner>
+    <EditText
+        android:id="@+id/additional_information_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/blood_type_textView"
+        android:hint="@string/allergies_hint"
+        android:inputType="text"/>
+    <Button
+        android:id="@+id/edit_profile_button"
+        android:layout_below="@id/additional_information_editText"
+        android:onClick="endActivity"
+        style="@style/finish_button" />
+
+</RelativeLayout>
